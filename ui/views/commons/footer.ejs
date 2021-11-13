@@ -1,0 +1,84 @@
+<footer id="footer">
+  <!-- top footer -->
+  <div class="section">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <div class="col-md-3 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-title">About Us</h3>
+            <p><%= aboutUs.smallDesc %></p>
+            <ul class="footer-links">
+              <li><a href="<%= aboutUs.location.href %>"><i class="<%= aboutUs.location.iconClass %>"></i><%= aboutUs.location.desc %></a></li>
+              <li><a href="<%= aboutUs.numberPhone.href %>"><i class="<%= aboutUs.numberPhone.iconClass %>"></i><%= aboutUs.numberPhone.desc %></a></li>
+              <li><a href="<%= aboutUs.email.href %>"><i class="<%= aboutUs.email.iconClass %>"></i><%= aboutUs.email.desc %></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-title">Categories</h3>
+            <ul class="footer-links">
+              <% for(const category of categories) { %>
+                <li><a href="<%= category.href %>"><%= category.name %></a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+
+        <div class="clearfix visible-xs"></div>
+
+        <div class="col-md-3 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-title">Information</h3>
+            <ul class="footer-links">
+              <% for(const info of information) { %>
+                <li><a href="<%= info.href %>"><%= info.name %></a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-title">Service</h3>
+            <ul class="footer-links">
+              <% for(const service of services) { %>
+                <li><a href="<%= service.href %>"><%= service.name %></a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /top footer -->
+
+  <!-- bottom footer -->
+  <div id="bottom-footer" class="section">
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <ul class="footer-payments">
+            <% for(const payment of payments) { %>
+              <li><a href="<%= payment.href %>"><i class="<%= payment.iconClass %>"></i></a></li>
+            <% } %>
+          </ul>
+          <span class="copyright">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </span>
+        </div>
+      </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /bottom footer -->
+</footer>

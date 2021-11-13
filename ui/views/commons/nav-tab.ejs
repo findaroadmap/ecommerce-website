@@ -1,0 +1,9 @@
+<div class="section-nav">
+  <ul class="section-tab-nav tab-nav">
+    <% for(const tabItem of tabItems) { %>
+      <li <% if (tabItem.isActive) { %> class="active" <% } %>>
+        <a data-toggle="tab" href="<%= tabItem.href %>"><%= tabItem.name %></a>
+      </li>
+    <% } %>
+  </ul>
+</div>
